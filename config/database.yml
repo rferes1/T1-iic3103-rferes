@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: glow123
+  pool: 5
+
+production:
+  <<: *default
+  database: glow61_production
+
+development:
+  <<: *default
+  database: glow61_development
+
+test:
+  <<: *default
+  database: glow61_test

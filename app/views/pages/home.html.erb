@@ -1,0 +1,49 @@
+<section class="hero is-primary", style='background-color: <%= @colors[0][1] %>'>
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title", style='color: #012649'> Tarea 1 Taller de Integración </h1>
+    </div>
+  </div>
+</section>
+
+<h2>Buscar personaje</h2> 
+<%= form_tag(search_path, method: :get) do%>
+	<%= text_field_tag(:search, params[:search]) %>
+	<%= submit_tag ("Buscar")%>
+<% end%>
+
+<div class="card">
+ 	<div class="card__content2", style='background-color: <%= @colors[4][1] %>'>
+		<p class="title", align="center">
+		    <strong> Braking Bad  </strong>
+		</p>
+	</div>
+	    <div class="card__content", style='background-color: <%= @colors[4][2] %>''>
+	      <p>
+	         <strong></strong> 
+	         <% @bb_arr.each do |season|%>
+	         	<div>
+	         	- <%=  link_to "Temporada #{season}", season_path("Breaking+Bad", season) %> 
+	         	</div>
+	         <% end %>
+	      </p>
+	    </div>
+</div>
+
+<div class="card">
+	<div class="card__content2", style='background-color: <%= @colors[4][1] %>'>
+		<p class="title", align="center">
+		    <strong> Better Call Saul </strong>
+		</p>
+	</div>
+	    <div class="card__content", style='background-color: <%= @colors[4][2] %>''>
+	      <p>
+	         <strong></strong> 
+	         <% @bcs_arr.each do |season|%>
+	         	<div>
+	         	- <%=  link_to "Temporada #{season}", season_path("Better+Call+Saul", season) %> 
+	         	</div>
+	         <% end %>
+	      </p>
+	    </div>
+</div>
