@@ -45,7 +45,7 @@
 	         <%end%>
 	         <% @character_json['appearance'].each do |ap|%>
 	         	<div>
-	         	- <%= ap%> 
+	         	- <%=  link_to "Temporada #{ap}", season_path("Breaking+Bad", ap) %> 
 	         	</div>
 	         <% end %>
 	      </p>
@@ -56,7 +56,7 @@
 	         <%end%>
 	         <% @character_json['better_call_saul_appearance'].each do |ap|%>
 	         	<div>
-	         	- <%= ap%> 
+	         	- <%=  link_to "Temporada #{ap}", season_path("Better+Call+Saul", ap) %> 
 	         	</div>
 	         <% end %>
 	      </p>
